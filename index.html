@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 1.1rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="images/logo.svg" alt="logo" />
+    </header>
+    <main class="calculator">
+      <div class="calculator__left">
+        <div class="calculator__inputField">
+          <label for="bill">Bill</label>
+          <input type="number" id="bill" value="0" min="0" />
+          <img src="images/icon-dollar.svg" alt="dollar" />
+        </div>
+
+        <div class="calculator__buttonGroup">
+          <label for="bill-select">Select Tip %</label>
+          <div class="calculator__grid">
+            <input type="button" value="5%" />
+            <input type="button" value="10%" />
+            <input type="button" value="15%" />
+            <input type="button" value="25%" />
+            <input type="button" value="50%" />
+            <input
+              type="number"
+              id="custom"
+              min="0"
+              max="100"
+              placeholder="Custom"
+            />
+          </div>
+        </div>
+
+        <div class="calculator__inputField">
+          <label for="persons"
+            ><span>Number of People</span><span class="warning"></span
+          ></label>
+          <input type="number" id="people" value="0" min="0" max="15" />
+          <img src="images/icon-person.svg" alt="person" />
+        </div>
+      </div>
+      <div class="calculator__right">
+        <div class="calculator__displayedResults">
+          <div>
+            <p>
+              <span><b>Tip Amount</b> <br />/ person</span>
+              <span id="tipPerPerson">$0.00</span>
+            </p>
+
+            <p>
+              <span><b>Total</b> <br />/ person</span>
+              <span id="totalPerPerson">$0.00</span>
+            </p>
+          </div>
+
+          <input type="button" id="reset" value="Reset" disabled />
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/aabc24">aabc24</a>.
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
